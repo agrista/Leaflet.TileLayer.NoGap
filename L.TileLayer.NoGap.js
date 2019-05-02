@@ -43,7 +43,7 @@ L.TileLayer.include({
 			var level = this._levels[tile.coords.z];
 			var tileSize = this.getTileSize();
 
-			if (level) {
+			if (level && level.canvasRange) {
 				// Where in the canvas should this tile go?
 				var offset = L.point(tile.coords.x, tile.coords.y)
 					.subtract(level.canvasRange.min)
